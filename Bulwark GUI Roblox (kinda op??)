@@ -1,0 +1,111 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local WalkSpeed = Instance.new("TextButton")
+local TitlePart = Instance.new("TextLabel")
+local Stamina = Instance.new("TextButton")
+local Parry = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.BackgroundTransparency = 0.500
+main.Position = UDim2.new(0.907335877, 0, 0.295575231, 0)
+main.Size = UDim2.new(0, 100, 0, 333)
+main.Visible = true
+main.Active = true
+main.Draggable = true
+
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = main
+WalkSpeed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WalkSpeed.BackgroundTransparency = 0.500
+WalkSpeed.BorderColor3 = Color3.fromRGB(138, 138, 138)
+WalkSpeed.BorderSizePixel = 4
+WalkSpeed.Position = UDim2.new(0.100000001, 0, 0.177177176, 0)
+WalkSpeed.Size = UDim2.new(0, 80, 0, 50)
+WalkSpeed.Font = Enum.Font.SourceSans
+WalkSpeed.Text = "WalkSpeed"
+WalkSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeed.TextSize = 14.000
+WalkSpeed.MouseButton1Down:connect(function()
+	while true do
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 35 --Walkspeed of your choice
+		wait()
+	end
+end)
+
+TitlePart.Name = "TitlePart"
+TitlePart.Parent = main
+TitlePart.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitlePart.BackgroundTransparency = 1.000
+TitlePart.Size = UDim2.new(0, 100, 0, 50)
+TitlePart.Font = Enum.Font.SciFi
+TitlePart.Text = "Bulwark"
+TitlePart.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitlePart.TextSize = 20.000
+
+Stamina.Name = "Stamina"
+Stamina.Parent = main
+Stamina.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Stamina.BackgroundTransparency = 0.500
+Stamina.BorderColor3 = Color3.fromRGB(138, 138, 138)
+Stamina.BorderSizePixel = 4
+Stamina.Position = UDim2.new(0.100000001, 0, 0.390390396, 0)
+Stamina.Size = UDim2.new(0, 80, 0, 50)
+Stamina.Font = Enum.Font.SourceSans
+Stamina.Text = "Stamina"
+Stamina.TextColor3 = Color3.fromRGB(255, 255, 255)
+Stamina.TextSize = 14.000
+Stamina.MouseButton1Down:connect(function()
+	while true do
+		local A_1 = game:GetService("Workspace").YOURNAMEHERE.Humanoid.Stamina
+		local A_2 = 9300000
+		local Event = game:GetService("ReplicatedStorage").RemoteEvents.ToServer.ChangeVal
+		Event:FireServer(A_1, A_2)
+		wait()
+		local A_1 = game:GetService("Workspace").YOURNAMEHERE["Nvmlolripbozo"].Stance
+		local A_2 = "DeletedPartSorry"
+		local Event = game:GetService("ReplicatedStorage").RemoteEvents.ToServer.ChangeVal
+		Event:FireServer(A_1, A_2)
+		wait(1)
+	end
+end)
+
+Parry.Name = "Parry"
+Parry.Parent = main
+Parry.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Parry.BackgroundTransparency = 0.500
+Parry.BorderColor3 = Color3.fromRGB(138, 138, 138)
+Parry.BorderSizePixel = 4
+Parry.Position = UDim2.new(0.100000001, 0, 0.621621609, 0)
+Parry.Size = UDim2.new(0, 80, 0, 50)
+Parry.Font = Enum.Font.SourceSans
+Parry.Text = "AutoParry"
+Parry.TextColor3 = Color3.fromRGB(255, 255, 255)
+Parry.TextSize = 14.000
+Parry.MouseButton1Down:connect(function()
+	while true do
+		local A_1 = game:GetService("Workspace").YOURNAMEHERE.Humanoid.Stamina
+		local A_2 = 9300000
+		local Event = game:GetService("ReplicatedStorage").RemoteEvents.ToServer.ChangeVal
+		Event:FireServer(A_1, A_2)
+		wait()
+		local A_1 = game:GetService("Workspace").YOURNAMEHERE["YourWeapon"].Stance
+		local A_2 = "Riposte"
+		local Event = game:GetService("ReplicatedStorage").RemoteEvents.ToServer.ChangeVal
+		Event:FireServer(A_1, A_2)
+		wait(1)
+	end
+end)
+
+--you gotta fill out the blanks :skull:
