@@ -1,0 +1,42 @@
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local EnableAuto = Instance.new("TextButton")
+
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.BackgroundTransparency = 0.500
+main.BorderColor3 = Color3.fromRGB(145, 145, 145)
+main.BorderSizePixel = 5
+main.Position = UDim2.new(0.922779918, 0, 0.476106197, 0)
+main.Size = UDim2.new(0, 100, 0, 28)
+main.Active = true
+main.Draggable = true
+
+EnableAuto.Name = "EnableAuto"
+EnableAuto.Parent = main
+EnableAuto.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnableAuto.BackgroundTransparency = 1.000
+EnableAuto.Position = UDim2.new(0, 0, -0.0357142873, 0)
+EnableAuto.Size = UDim2.new(0, 100, 0, 28)
+EnableAuto.Font = Enum.Font.TitilliumWeb
+EnableAuto.Text = "InfStamina"
+EnableAuto.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnableAuto.TextSize = 25.000
+EnableAuto.MouseButton1Down:connect(function()
+		local A_1 = game:GetService("Workspace").Sy_ync.Humanoid.Stamina
+		local A_2 = math.huge
+		local Event = game:GetService("ReplicatedStorage").RemoteEvents.ToServer.ChangeVal
+		Event:FireServer(A_1, A_2)
+		wait()
+		local A_1 = game:GetService("Workspace").Sy_ync["Nvmlolripbozo"].Stance
+		local A_2 = "DeletedPartSorry"
+		local Event = game:GetService("ReplicatedStorage").RemoteEvents.ToServer.ChangeVal
+		Event:FireServer(A_1, A_2)
+end)
