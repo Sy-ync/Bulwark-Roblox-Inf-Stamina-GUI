@@ -39,4 +39,5 @@ while true do
 		local Event = game:GetService("ReplicatedStorage").RemoteEvents.ToServer.ChangeVal
 		Event:FireServer(A_1, A_2)
 		wait(1)
+end
 end)
