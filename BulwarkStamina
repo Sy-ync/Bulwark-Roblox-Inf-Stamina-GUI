@@ -31,7 +31,7 @@ EnableAuto.TextColor3 = Color3.fromRGB(255, 255, 255)
 EnableAuto.TextSize = 25.000
 EnableAuto.MouseButton1Down:connect(function()
 		local A_1 = game:GetService("Workspace").Sy_ync.Humanoid.Stamina
-		local A_2 = 100000000
+		local A_2 = 9300000
 		local Event = game:GetService("ReplicatedStorage").RemoteEvents.ToServer.ChangeVal
 		Event:FireServer(A_1, A_2)
 		wait()
